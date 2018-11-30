@@ -117,6 +117,9 @@ if($mfg=~ /Ubiquiti/i)
     $mfgprefix="mikrotik";
 } elsif($mfg=~ /TP-Link/i) {
     $mfgprefix="cpe";
+} elsif($mfg=~ /cpe/i) {
+    # handle hardware type for cpe210v2
+    $mfgprefix="cpe";
 }
 
 if($hardwaretype eq "nanostation-m")
